@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
@@ -190,4 +191,198 @@ ul li:hover {
     50% {
         transform: scale(1.05);
     }
+=======
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.resume-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+.dark-mode {
+    background-color: rgb(25,39,52);
+    color: #fff;
+}
+.toggle-color{
+    color:rgb(216, 221, 226)
+}
+.header button {
+    padding: 10px 20px;
+    background-color: #0044cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.header button:hover {
+    background-color: #002966;
+}
+
+
+.header {
+    text-align: center;
+    padding: 30px;
+    background: #0044cc;
+    color: #fff;
+    animation: bounceIn 1.5s ease;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    animation: pulse 2s infinite;
+}
+
+.header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    font-weight: lighter;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+    background: #f9f9f9;
+    border-left: 8px solid #0044cc;
+    border-radius: 5px;
+    animation: fadeInUp 1s ease-in-out;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+section:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.05);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #0044cc;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #ffcc00;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 3px;
+    animation: slideInLeft 0.5s ease;
+}
+
+ul li:hover {
+    background: #ffeb3b;
+    transform: translateX(10px);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+@media (min-width: 600px) {
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section {
+        flex: 1 1 calc(50% - 20px); /* 2 columns layout */
+        margin: 10px;
+    }
+}
+
+@media (min-width: 900px) {
+    .main-content {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    section {
+        flex: 1 1 calc(33.333% - 20px); /* 3 columns layout */
+        margin: 10px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from, 20%, 40%, 60%, 80%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    0% {
+        opacity: 0;
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+    to {
+        opacity: 1;
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+>>>>>>> e912e6cb7a86e07dffe6e99dad092c4e7f2da001
 }
